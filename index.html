@@ -1,31 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Meagan Swenson — Full-Stack Developer</title>
-<meta name="description" content="Meagan Swenson, full-stack developer with 25+ years of experience, front-end to database. Based in Amsterdam.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Figtree:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css">
-<script src="js/main.js" defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self'; font-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'; upgrade-insecure-requests">
+  <title>Meagan Swenson — Full-Stack Developer</title>
+  <meta name="description" content="Meagan Swenson, full-stack developer with 25+ years of experience, front-end to database. Based in Amsterdam.">
+  <link rel="canonical" href="https://codelaunch.nl/">
+  <meta name="theme-color" content="#9ed3f0">
+
+  <!-- social share preview -->
+  <meta property="og:type" content="profile">
+  <meta property="og:url" content="https://codelaunch.nl/">
+  <meta property="og:title" content="Meagan Swenson — Full-Stack Developer">
+  <meta property="og:description" content="25+ years building web applications from the user interface to the database. Oracle/PL-SQL, PHP/Laravel, React and AI-assisted development. Based in Amsterdam.">
+  <meta property="og:image" content="https://codelaunch.nl/images/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Meagan Swenson, full-stack developer, as a cartoon astronaut against a blue sky">
+  <meta property="og:locale" content="en_GB">
+  <meta property="profile:first_name" content="Meagan">
+  <meta property="profile:last_name" content="Swenson">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="favicon.ico" sizes="48x48">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="preload" href="fonts/figtree-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/bricolage-grotesque-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/main.js" defer></script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Meagan Swenson",
+    "jobTitle": "Full-Stack Developer",
+    "url": "https://codelaunch.nl/",
+    "image": "https://codelaunch.nl/images/headshot.jpg",
+    "email": "mailto:swens2005@yahoo.com",
+    "telephone": "+31627355891",
+    "address": { "@type": "PostalAddress", "addressLocality": "Amsterdam", "addressCountry": "NL" },
+    "sameAs": ["https://www.linkedin.com/in/meagan-swenson"],
+    "knowsAbout": ["Oracle", "PL/SQL", "PHP", "Laravel", "React", "JavaScript", "HTML", "CSS", "AI-assisted development", "Claude Code"],
+    "knowsLanguage": ["English", "Dutch", "Spanish"]
+  }
+  </script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
-<div id="sky"></div><div id="stars"></div><div id="moon" aria-hidden="true"></div><div id="meteors" aria-hidden="true"><img src="images/meteor-1.webp" alt="" style="left:-6.24%;top:16.86%;width:91.75%;--md:4.2s;--mdl:-1.1s;--sx:39px;--sy:-24px;--ex:-39px;--ey:24px"><img src="images/meteor-2.webp" alt="" style="left:29.73%;top:11.60%;width:57.24%;--md:3.1s;--mdl:-2.3s;--sx:51px;--sy:-32px;--ex:-51px;--ey:32px"><img src="images/meteor-3.webp" alt="" style="left:43.92%;top:40.71%;width:49.54%;--md:3.6s;--mdl:-0.4s;--sx:44px;--sy:-28px;--ex:-44px;--ey:28px"><img src="images/meteor-4.webp" alt="" style="left:59.88%;top:15.53%;width:41.45%;--md:2.6s;--mdl:-1.7s;--sx:56px;--sy:-35px;--ex:-56px;--ey:35px"><img src="images/meteor-5.webp" alt="" style="left:61.98%;top:0.94%;width:30.69%;--md:3.3s;--mdl:-2.9s;--sx:49px;--sy:-31px;--ex:-49px;--ey:31px"></div><div id="objs" aria-hidden="true"></div><div id="bounds" aria-hidden="true"></div><div id="bgclouds" aria-hidden="true"></div><div id="behind" aria-hidden="true"></div><div id="frontfx" aria-hidden="true"></div><div id="grass" aria-hidden="true"><img class="pet dog" src="images/pet-dog.webp" alt="" style="left:31.028%;top:47.709%;width:11.083%"><img class="pet cat" src="images/pet-cat.webp" alt="" style="left:42.111%;top:52.133%;width:4.556%"><div class="gl"></div></div>
 
-<a id="badge" href="#lobby" aria-label="Meagan Swenson, back to top"><img alt="" width="298" height="560"><span><b>Meagan<br>Swenson</b><small>Full-stack developer</small></span></a>
-<div id="hud" aria-hidden="true">
-  <div id="read"><div class="lbl">Altitude</div><div id="alt">000.0<small>km</small></div><hr>
-    <dl id="rows"><dt>Layer</dt><dd id="layer">Troposphere</dd><dt>Temp</dt><dd id="temp">15 °C</dd><dt>Mission</dt><dd id="flr">Pre-launch</dd><dt>Status</dt><dd id="stat">Ground level</dd></dl>
-    <div id="cap"></div></div>
+<!-- decorative scene: sky, stars, moon, meteors and layers main.js fills in -->
+<div id="sky"></div>
+<div id="stars"></div>
+<div id="moon" aria-hidden="true"></div>
+<div id="meteors" aria-hidden="true">
+  <img class="m1" src="images/meteor-1.webp" alt="" width="697" height="469" loading="lazy" decoding="async">
+  <img class="m2" src="images/meteor-2.webp" alt="" width="435" height="275" loading="lazy" decoding="async">
+  <img class="m3" src="images/meteor-3.webp" alt="" width="376" height="228" loading="lazy" decoding="async">
+  <img class="m4" src="images/meteor-4.webp" alt="" width="315" height="184" loading="lazy" decoding="async">
+  <img class="m5" src="images/meteor-5.webp" alt="" width="233" height="130" loading="lazy" decoding="async">
 </div>
-<div id="ruler" aria-hidden="true"></div><b id="ptr" aria-hidden="true"></b>
+<div id="objs" aria-hidden="true"></div>
+<div id="bounds" aria-hidden="true"></div>
+<div id="bgclouds" aria-hidden="true"></div>
+<div id="behind" aria-hidden="true"></div>
+<div id="frontfx" aria-hidden="true"></div>
+<div id="grass" aria-hidden="true">
+  <img class="pet dog" src="images/pet-dog.webp" alt="" width="399" height="301">
+  <img class="pet cat" src="images/pet-cat.webp" alt="" width="164" height="155">
+  <div class="gl"></div>
+</div>
+
+<a id="badge" href="#lobby" aria-label="Meagan Swenson, full-stack developer: back to top">
+  <img src="images/astronaut.webp" alt="" width="298" height="560">
+  <span><b>Meagan<br>Swenson</b><small>Full-stack developer</small></span>
+</a>
+<div id="hud" aria-hidden="true">
+  <div id="read">
+    <div class="lbl">Altitude</div>
+    <div id="alt">000.0<small>km</small></div>
+    <hr>
+    <dl id="rows">
+      <dt>Layer</dt><dd id="layer">Troposphere</dd>
+      <dt>Temp</dt><dd id="temp">15 °C</dd>
+      <dt>Mission</dt><dd id="flr">Pre-launch</dd>
+      <dt>Status</dt><dd id="stat">Ground level</dd>
+    </dl>
+    <div id="cap"></div>
+  </div>
+</div>
+<div id="ruler" aria-hidden="true"></div>
+<b id="ptr" aria-hidden="true"></b>
 
 <main id="main">
   <section id="lobby" data-floor="Pre-launch">
-    <div class="ident"><img class="photo" src="images/astronaut.png" alt="Cartoon astronaut avatar of Meagan Swenson" width="298" height="560"><h1>Meagan<br>Swenson</h1></div>
+    <div class="ident">
+      <img class="photo" src="images/astronaut.webp" alt="Cartoon astronaut avatar of Meagan Swenson" width="298" height="560" fetchpriority="high">
+      <h1>Meagan<br>Swenson</h1>
+    </div>
     <div class="console" role="group" aria-label="Contact panel">
       <div class="screen">
         <div class="brief">Mission briefing · Meagan Swenson</div>
@@ -38,7 +111,7 @@
         <div class="btns">
           <a class="cbtn" href="mailto:swens2005@yahoo.com"><i></i><b>Email</b><small>swens2005@yahoo.com</small></a>
           <a class="cbtn" href="tel:+31627355891"><i></i><b>Call</b><small>+31 6 27 35 58 91</small></a>
-          <a class="cbtn" href="https://www.linkedin.com/in/meagan-swenson" target="_blank" rel="noopener"><i></i><b>LinkedIn</b><small>/in/meagan-swenson</small></a>
+          <a class="cbtn" href="https://www.linkedin.com/in/meagan-swenson" target="_blank" rel="noopener noreferrer"><i></i><b>LinkedIn</b><small>/in/meagan-swenson</small></a>
           <a class="cbtn" href="meagan-swenson-cv.pdf" download><i></i><b>Download CV</b><small>PDF · ATS-friendly</small></a>
         </div>
         <div class="loc"><span>Base</span>Amsterdam, Netherlands</div>
@@ -47,7 +120,7 @@
         <button class="sw on" type="button" role="switch" aria-checked="true" data-off="Status: still accepting new missions. Nice try."><span class="tog"></span>Open to work</button>
         <button class="sw on" type="button" role="switch" aria-checked="true" data-off="Warning: coffee levels critical"><span class="tog"></span>Coffee</button>
         <button class="sw" type="button" role="switch" aria-checked="false" data-on="Autopilot engaged. Meagan prefers manual control."><span class="tog"></span>Autopilot</button>
-        <button class="lever" type="button" aria-label="Start the climb: scroll to flight stats"><span class="track"><span class="knob"></span></span>Launch</button>
+        <button class="lever" type="button" aria-label="Launch: scroll to mission highlights"><span class="track"><span class="knob"></span></span>Launch</button>
       </div>
     </div>
   </section>
@@ -55,10 +128,10 @@
   <section class="floor" id="stats" data-floor="Pre-launch" aria-label="Mission highlights">
     <div class="tag">Mission highlights</div>
     <div class="stats">
-      <div class="card stat"><svg class="gauge" viewBox="0 0 120 70" aria-hidden="true"><path class="trk" d="M10 60A50 50 0 0 1 110 60"/><path class="val" d="M10 60A50 50 0 0 1 110 60" stroke-dasharray="157.08" stroke-dashoffset="47.12" data-g="0.7"/><line x1="60" y1="60" x2="85.9" y2="24.4" data-g="0.7"/></svg><b data-n="7" data-suf=" yrs">7 yrs</b><span>building and maintaining production web and back-end systems at Philips and Albert Heijn</span></div>
-      <div class="card stat"><svg class="gauge" viewBox="0 0 120 70" aria-hidden="true"><path class="trk" d="M10 60A50 50 0 0 1 110 60"/><path class="val" d="M10 60A50 50 0 0 1 110 60" stroke-dasharray="157.08" stroke-dashoffset="15.71" data-g="0.9"/><line x1="60" y1="60" x2="101.8" y2="46.4" data-g="0.9"/></svg><b>AI</b><span>agentic pipeline in Claude Code: agents turn user stories into working code, then review it before merge</span></div>
-      <div class="card stat"><svg class="gauge" viewBox="0 0 120 70" aria-hidden="true"><path class="trk" d="M10 60A50 50 0 0 1 110 60"/><path class="val" d="M10 60A50 50 0 0 1 110 60" stroke-dasharray="157.08" stroke-dashoffset="78.54" data-g="0.5"/><line x1="60" y1="60" x2="60.0" y2="16.0" data-g="0.5"/></svg><b data-n="50" data-pre="+" data-suf="%">+50%</b><span>site traffic after rebuilding the Philips global Marketing &amp; E-Commerce site in 6 months</span></div>
-      <div class="card stat"><svg class="gauge" viewBox="0 0 120 70" aria-hidden="true"><path class="trk" d="M10 60A50 50 0 0 1 110 60"/><path class="val" d="M10 60A50 50 0 0 1 110 60" stroke-dasharray="157.08" stroke-dashoffset="23.56" data-g="0.85"/><line x1="60" y1="60" x2="99.2" y2="40.0" data-g="0.85"/></svg><b data-n="100" data-suf="s">100s</b><span>of manual GDPR requests a month replaced by an automated Oracle/PL-SQL anonymization process</span></div>
+      <div class="card stat"><svg class="gauge" viewBox="0 0 120 70" aria-hidden="true"><path class="trk" d="M10 60A50 50 0 0 1 110 60"/><path class="val" d="M10 60A50 50 0 0 1 110 60" stroke-dasharray="157.08" stroke-dashoffset="47.12" data-g="0.7"/><line x1="60" y1="60" x2="85.9" y2="24.4"/></svg><b data-n="7" data-suf=" yrs">7 yrs</b><span>building and maintaining production web and back-end systems at Philips and Albert Heijn</span></div>
+      <div class="card stat"><svg class="gauge" viewBox="0 0 120 70" aria-hidden="true"><path class="trk" d="M10 60A50 50 0 0 1 110 60"/><path class="val" d="M10 60A50 50 0 0 1 110 60" stroke-dasharray="157.08" stroke-dashoffset="15.71" data-g="0.9"/><line x1="60" y1="60" x2="101.8" y2="46.4"/></svg><b>AI</b><span>agentic pipeline in Claude Code: agents turn user stories into working code, then review it before merge</span></div>
+      <div class="card stat"><svg class="gauge" viewBox="0 0 120 70" aria-hidden="true"><path class="trk" d="M10 60A50 50 0 0 1 110 60"/><path class="val" d="M10 60A50 50 0 0 1 110 60" stroke-dasharray="157.08" stroke-dashoffset="78.54" data-g="0.5"/><line x1="60" y1="60" x2="60.0" y2="16.0"/></svg><b data-n="50" data-pre="+" data-suf="%">+50%</b><span>site traffic after rebuilding the Philips global Marketing &amp; E-Commerce site in 6 months</span></div>
+      <div class="card stat"><svg class="gauge" viewBox="0 0 120 70" aria-hidden="true"><path class="trk" d="M10 60A50 50 0 0 1 110 60"/><path class="val" d="M10 60A50 50 0 0 1 110 60" stroke-dasharray="157.08" stroke-dashoffset="23.56" data-g="0.85"/><line x1="60" y1="60" x2="99.2" y2="40.0"/></svg><b data-n="100" data-suf="s">100s</b><span>of manual GDPR requests a month replaced by an automated Oracle/PL-SQL anonymization process</span></div>
     </div>
   </section>
 
@@ -66,31 +139,317 @@
     <div class="tag">Flight training · 1994–2002</div>
     <h2>Where the climb started</h2>
     <div class="card profile">
-      <img class="headshot" src="images/headshot.jpg" alt="Meagan Swenson" width="280" height="280"><h3 class="sm">Profile</h3>
+      <img class="headshot" src="images/headshot.jpg" alt="Meagan Swenson" width="280" height="280" loading="lazy" decoding="async">
+      <h3 class="sm">Profile</h3>
       <p>Full-stack developer with 25+ years of experience building websites and web applications, from the user interface to the database. Seven of those years at Philips and Albert Heijn in the Netherlands.</p>
       <p>Main stack: Oracle/PL-SQL, PHP/Laravel, React, HTML/CSS/JavaScript. Since 2026 I work with AI-assisted and agentic development using Claude Code and GitHub Copilot.</p>
-      <div class="gwrap"><img class="george" src="images/george-bailey.webp" alt="George Bailey, Meagan's dog" width="300" height="530"></div><p><b>Off the clock:</b> Originally from Madison, Wisconsin, now settled in Amsterdam with my partner, my dog George Bailey, and my cat Pippi Longstocking (he refuses to pose for photos). I'm happiest building new things, on-screen or in the kitchen, and I make time for a good stand-up special and a properly brewed cup of coffee.</p>
+      <div class="gwrap"><img class="george" src="images/george-bailey.webp" alt="George Bailey, Meagan's dog" width="300" height="530" loading="lazy" decoding="async"></div>
+      <p><b>Off the clock:</b> Originally from Madison, Wisconsin, now settled in Amsterdam with my partner, my dog George Bailey, and my cat Pippi Longstocking (he refuses to pose for photos). I'm happiest building new things, on-screen or in the kitchen, and I make time for a good stand-up special and a properly brewed cup of coffee.</p>
     </div>
-    <div class="two" style="margin-top:22px">
-      <div class="card"><h3 class="sm">Education</h3>
+    <div class="two">
+      <div class="card">
+        <h3 class="sm">Education</h3>
         <div class="row"><div>Herzing University<small>Computer Information Systems, AS</small></div><em>2000–2002</em></div>
         <div class="row"><div>University of Wisconsin<small>Teaching &amp; General Sciences</small></div><em>1998–1999</em></div>
-        <div class="row"><div>Madison Memorial<small>General Sciences, High Honors</small></div><em>1994–1998</em></div></div>
-      <div class="card certs"><h3 class="sm">Certifications</h3>
+        <div class="row"><div>Madison Memorial<small>General Sciences, High Honors</small></div><em>1994–1998</em></div>
+      </div>
+      <div class="card certs">
+        <h3 class="sm">Certifications</h3>
         <div class="row"><div>Project Management Professional (PMP)<small>PMI</small></div><em>Pursuing</em></div>
         <div class="row"><div>EITCA Web Development Programme<small>EITCI</small></div><em>May 2023</em></div>
-        <div class="row"><div>A+ Certification<small>CompTIA</small></div><em>Jan 2001</em></div></div>
+        <div class="row"><div>A+ Certification<small>CompTIA</small></div><em>Jan 2001</em></div>
+      </div>
     </div>
-  
-    <div class="card langs" role="group" aria-label="Languages"><span class="lt">Languages</span><div class="lg"><span class="sig" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></span><b>English</b><em>Native</em></div><div class="lg"><span class="sig" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i></span><b>Dutch</b><em>Intermediate</em></div><div class="lg"><span class="sig" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i></span><b>Spanish</b><em>Intermediate</em></div></div>
+    <div class="card langs" role="group" aria-label="Languages">
+      <span class="lt">Languages</span>
+      <div class="lg"><span class="sig" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></span><b>English</b><em>Native</em></div>
+      <div class="lg"><span class="sig" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i></span><b>Dutch</b><em>Intermediate</em></div>
+      <div class="lg"><span class="sig" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i></span><b>Spanish</b><em>Intermediate</em></div>
+    </div>
   </section>
 
-  <div id="jobs"></div>
+  <section class="floor" id="experience" data-floor="01 · HP">
+    <div class="tag">Mission 01 · 2002–2018</div>
+    <h2>Hewlett-Packard</h2>
+    <article class="card job">
+      <h3>Hewlett-Packard<span class="co"> (acquired EDS in 2006)</span></h3>
+      <div class="role2">Technical Lead, Senior Business Analyst &amp; Web Application Developer</div>
+      <div class="when">Nov 2002 – Sep 2018 · 16 years</div>
+      <ul>
+        <li>Built 20+ web applications, including a communication log and issue tracker</li>
+        <li>Built hundreds of specialized, interactive data reports using SQL, PHP, and HTML</li>
+        <li>Designed streamlined user interfaces with Photoshop</li>
+        <li>Completed testing and release planning for web applications</li>
+        <li>Maintained document repository and back-end data-entry web applications</li>
+        <li>Produced documentation requests for database asset creation in Oracle</li>
+      </ul>
+        <div class="proj">
+          <span class="plab">Project 01</span>
+          <h4>Wisconsin Medicaid Time-Tracking System</h4>
+          <p>Built a complete time-tracking and invoicing system from the ground up using PL/SQL, ASP, Active Directory, and Ajax, with reporting accurate down to $0.01.</p>
+        </div>
+        <div class="proj">
+          <span class="plab">Project 02</span>
+          <h4>Document Repository Overhaul</h4>
+          <p>Rolled out an extensive update covering hundreds of reports for the State of Wisconsin Medicaid program, improving efficiency and data access.</p>
+        </div>
+      <div class="stack">
+        <span>HTML</span>
+        <span>CSS</span>
+        <span>JavaScript</span>
+        <span>PHP</span>
+        <span>ASP / JSP</span>
+        <span>Ajax</span>
+        <span>PL/SQL</span>
+        <span>Oracle</span>
+        <span>Active Directory</span>
+        <span>Photoshop</span>
+      </div>
+    </article>
+  </section>
+
+  <section class="floor" data-floor="02 · Philips">
+    <div class="tag">Mission 02 · 2019–2023</div>
+    <h2>Philips</h2>
+    <article class="card job">
+      <h3>Philips<span class="co"> (Koninklijke Philips N.V.)</span></h3>
+      <div class="role2">Technical Lead: Hybrid Full-Stack Developer &amp; Senior Business Analyst</div>
+      <div class="when">Feb 2019 – Aug 2023 · 4.5 years</div>
+      <ul>
+        <li>Built and maintained the internal Philips Global Marketing &amp; E-Commerce website</li>
+        <li>Maintained 10+ additional custom website builds and SharePoint sites</li>
+        <li>Designed functional user interfaces and website elements from brand guidelines</li>
+        <li>Developed user experience flows based on stakeholder requirements</li>
+        <li>Created websites using HTML, CSS, and JavaScript arrays for data management</li>
+        <li>Proposed technical implementation strategies for the right business technologies</li>
+        <li>Performed data analysis using SQL and Excel to support data-driven decisions</li>
+        <li>Completed testing and release planning between environments</li>
+      </ul>
+        <div class="proj">
+          <span class="plab">Project 01</span>
+          <h4>Global Website Revamp</h4>
+          <p>Inherited a disorganized, outdated global marketing site. Engaged stakeholders to define requirements and a full re-design plan, relaunching within 6 months to a 50% increase in site traffic.</p>
+        </div>
+        <div class="proj">
+          <span class="plab">Project 02</span>
+          <h4>Custom Web App</h4>
+          <p>Built a fully interactive web application covering all marketing and e-commerce business processes, with complex data structures for ongoing flexibility, rolled out within 30 days.</p>
+        </div>
+      <div class="stack">
+        <span>HTML</span>
+        <span>CSS</span>
+        <span>JavaScript</span>
+        <span>jQuery</span>
+        <span>SQL</span>
+        <span>Excel</span>
+        <span>SharePoint</span>
+      </div>
+    </article>
+  </section>
+
+  <section class="floor" data-floor="03 · Albert Heijn">
+    <div class="tag">Mission 03 · 2023–now (active)</div>
+    <h2>Albert Heijn</h2>
+    <article class="card job">
+      <h3>Albert Heijn<span class="co"> (Ahold Delhaize)</span></h3>
+      <div class="role2">Back-End DevOps Engineer &amp; Technical Product Owner</div>
+      <div class="when">Sep 2023 – Present · Technical Product Owner scope since 2025</div>
+      <ul class="collapsed" id="tasks-03">
+        <li>Developing and maintaining back-end services and PL/SQL applications within Oracle databases supporting the Order Management System (OMS) for Albert Heijn Online</li>
+        <li>Delivered multiple stories end to end through the full SDLC: analysis, PL/SQL development, unit tests, and pull-request review</li>
+        <li>Built an automated PL/SQL regulatory reporting job (ANAF, Romania) for monthly cash-payment customer data extraction, encrypted SFTP delivery from the Unix server, and Control-M scheduling, delivered end to end</li>
+        <li>Designed and built a new Oracle Forms menu for country-specific customer anonymization, working through role-based access constraints on legacy roles</li>
+        <li>Root-caused and remediated recurring production incidents in BOFF/PL-SQL, including a merge-sequencing timing defect and 12 correlated messaging errors traced to specific order IDs</li>
+        <li>Reviewed PL/SQL code and provided implementation feedback to peers, catching a cursor-placement compilation defect before release</li>
+        <li class="extra">Deployed a defensive-programming hotfix (targeted exception handling) that eliminated a recurring class of overnight incidents caused by non-finalized order auto-cancellation</li>
+        <li class="extra">Migrated legacy integration contracts to a new messaging platform, authoring the technical migration hub and reusable contract-documentation templates</li>
+        <li class="extra">Documented and maintained 35+ BOFF↔FOFF/ECDT integration contracts, including event handlers, PL/SQL packages, entity mappings, and testing risk assessments, creating a searchable catalog of the OMS integration surface</li>
+        <li class="extra">Extended a data-lake PII-tagged dataset with a new employee identifier field, authoring the user story, coordinating PII-tag creation, and running verification SQL across five stakeholder teams</li>
+        <li class="extra">Performed final UTF-8 conversion verification testing across multiple production screens and reports ahead of sign-off</li>
+        <li class="extra">Configured and tested threshold-based security alerting rules for the OMS platform, partnering with the security engineering team on scope and validation</li>
+        <li class="extra">Investigated and resolved Control-M job scheduling issues: tuned retry logic on one job and restored another that had been unintentionally held since an unrelated infrastructure migration</li>
+        <li class="extra">Used GitHub Copilot to generate SLI metric recommendations across OMS batch jobs, mapping each job to success-rate, execution-time, and row-count metrics</li>
+      </ul>
+      <button class="more" type="button" aria-expanded="false" aria-controls="tasks-03">Show all 14 ▾</button>
+        <div class="proj">
+          <span class="plab">Project 01</span>
+          <h4>ANAF Regulatory Reporting (Romania)</h4>
+          <p>Designed, built, and scheduled a fully automated PL/SQL job to meet a legal monthly reporting obligation, delivered end to end from analysis to production.</p>
+        </div>
+        <div class="proj">
+          <span class="plab">Project 02</span>
+          <h4>GDPR Data Anonymization</h4>
+          <p>Built a self-sustainable anonymization process for a back-end order-tracking database, verifying customers via a single data element and eliminating hundreds of manual requests per month.</p>
+        </div>
+        <div class="proj">
+          <span class="plab">Project 03</span>
+          <h4>SLI/SLO Framework</h4>
+          <p>Defined service-level indicators for critical batch jobs, using AI tooling to help scope the initial metric set.</p>
+        </div>
+      <div class="stack">
+        <span>Oracle</span>
+        <span>PL/SQL</span>
+        <span>Oracle Forms</span>
+        <span>Control-M</span>
+        <span>Unix</span>
+        <span>SFTP</span>
+        <span>Git</span>
+        <span>GitHub Copilot</span>
+        <span>JIRA</span>
+        <span>Confluence</span>
+      </div>
+    </article>
+  </section>
+
+  <section class="floor" data-floor="04 · Contract">
+    <div class="tag">Mission 04 · 2026–now (active)</div>
+    <h2>Independent contractor</h2>
+    <article class="card job lime">
+      <h3>Independent contractor<span class="co"> · AI-assisted development</span></h3>
+      <div class="role2">Full-Stack Developer (contract)</div>
+      <div class="when">2026 – Present · ongoing</div>
+      <ul>
+        <li>Building full websites from the ground up using AI-assisted development, with Claude Code and GitHub Copilot as primary tools</li>
+        <li>Developing with PHP, Laravel, React, and SQL, using AI assistance to work across Node/npm, Vite, Composer, and Livewire/Inertia</li>
+        <li>Set up CI/CD through GitHub deployments to VPS and cPanel-hosted environments</li>
+        <li>Integrating AI tooling into the workflow improved project organization and delivery speed</li>
+      </ul>
+        <div class="proj">
+          <span class="plab">Project 01</span>
+          <h4>Agentic Development Pipeline</h4>
+          <p>Built on Claude Code: user stories scoped specifically for AI-agent execution, an agent that consumes those stories to generate working code, and a second agent that reviews the generated code before merge.</p>
+        </div>
+        <div class="proj">
+          <span class="plab">Project 02</span>
+          <h4>Custom Claude Skills</h4>
+          <p>Authored custom Claude skills that package repeatable development workflows and standards for reuse across projects.</p>
+        </div>
+      <div class="stack">
+        <span>PHP</span>
+        <span>Laravel</span>
+        <span>React</span>
+        <span>SQL</span>
+        <span>Claude Code</span>
+        <span>GitHub Copilot</span>
+        <span>Node/npm</span>
+        <span>Vite</span>
+        <span>Composer</span>
+        <span>Livewire/Inertia</span>
+        <span>GitHub CI/CD</span>
+      </div>
+    </article>
+  </section>
 
   <section class="floor" id="skills" data-floor="Payload">
     <div class="tag">Payload</div>
     <h2>What I bring to a team</h2>
-    <div class="card" id="skillbox"></div>
+    <div class="card">
+      <div class="grp">
+        <h3>Core skills</h3>
+        <div>
+          <span>Full-stack web development (front-end to database)</span>
+          <span>AI-assisted &amp; agentic development workflows</span>
+          <span>Root-cause analysis &amp; problem-solving</span>
+          <span>Database design, integration &amp; query optimization</span>
+          <span>API integration &amp; system-to-system messaging</span>
+          <span>Requirements translation (business need to technical spec)</span>
+          <span>Unit testing, code review &amp; pull-request review</span>
+          <span>Testing, release planning &amp; environment promotion</span>
+          <span>Documentation &amp; technical knowledge capture</span>
+          <span>Team collaboration &amp; cross-functional communication</span>
+        </div>
+      </div>
+      <div class="grp">
+        <h3>Languages &amp; front-end</h3>
+        <div>
+          <span>HTML</span>
+          <span>CSS</span>
+          <span>JavaScript</span>
+          <span>jQuery</span>
+          <span>Bootstrap</span>
+          <span>PHP</span>
+          <span>Laravel</span>
+          <span>React</span>
+          <span>ASP</span>
+          <span>JSP</span>
+          <span>Java</span>
+          <span>Ajax</span>
+          <span>REST APIs</span>
+        </div>
+      </div>
+      <div class="grp">
+        <h3>Database &amp; back-end</h3>
+        <div>
+          <span>Oracle</span>
+          <span>PL/SQL</span>
+          <span>MySQL</span>
+          <span>MSSQL</span>
+          <span>Oracle Forms</span>
+          <span>SQL Developer</span>
+        </div>
+      </div>
+      <div class="grp hi">
+        <h3>AI-assisted development</h3>
+        <div>
+          <span>Claude Code</span>
+          <span>GitHub Copilot</span>
+          <span>Agentic workflows: story-to-code agents &amp; automated code review</span>
+          <span>Custom Claude skills</span>
+          <span>User stories designed for AI-agent execution</span>
+          <span>Node/npm</span>
+          <span>Vite</span>
+          <span>Composer</span>
+          <span>Livewire/Inertia</span>
+        </div>
+      </div>
+      <div class="grp">
+        <h3>DevOps, hosting &amp; release</h3>
+        <div>
+          <span>Git</span>
+          <span>GitHub (pull requests, code review)</span>
+          <span>CI/CD via GitHub deployments</span>
+          <span>VPS &amp; cPanel hosting</span>
+          <span>Unix/Linux</span>
+          <span>WinSCP</span>
+          <span>Putty</span>
+          <span>SFTP</span>
+          <span>File encryption for secure data delivery</span>
+          <span>Control-M</span>
+          <span>OpsGenie</span>
+          <span>PagerDuty</span>
+          <span>ServiceNow</span>
+          <span>Power Automate</span>
+          <span>Active Directory</span>
+          <span>VS Code</span>
+        </div>
+      </div>
+      <div class="grp">
+        <h3>Platforms &amp; design tools</h3>
+        <div>
+          <span>Shopify</span>
+          <span>Magento</span>
+          <span>WordPress</span>
+          <span>Webflow</span>
+          <span>Dreamweaver</span>
+          <span>Photoshop</span>
+          <span>Confluence</span>
+          <span>JIRA</span>
+          <span>Draw.io</span>
+        </div>
+      </div>
+      <div class="grp">
+        <h3>Microsoft tools</h3>
+        <div>
+          <span>Excel</span>
+          <span>Access</span>
+          <span>Outlook</span>
+          <span>PowerPoint</span>
+          <span>SharePoint</span>
+          <span>Visio</span>
+          <span>Word</span>
+        </div>
+      </div>
+    </div>
   </section>
 
   <section class="floor" id="kind" data-floor="Ground control">
@@ -106,12 +465,11 @@
     <div class="tag">Kármán line · You've reached space</div>
     <div class="card">
       <h2>Like what you see? Let's talk.</h2>
-      <p style="max-width:48ch;font-size:18px;margin:18px 0 10px">Based in Amsterdam and open to new opportunities.</p>
-      <a class="big" href="mailto:swens2005@yahoo.com">Email me</a><a class="big" href="tel:+31627355891">Call</a><a class="big" href="https://www.linkedin.com/in/meagan-swenson" target="_blank" rel="noopener">LinkedIn</a><a class="big" href="meagan-swenson-cv.pdf" download>Download CV</a>
+      <p>Based in Amsterdam and open to new opportunities.</p>
+      <a class="big" href="mailto:swens2005@yahoo.com">Email me</a><a class="big" href="tel:+31627355891">Call</a><a class="big" href="https://www.linkedin.com/in/meagan-swenson" target="_blank" rel="noopener noreferrer">LinkedIn</a><a class="big" href="meagan-swenson-cv.pdf" download>Download CV</a>
     </div>
   </section>
 </main>
-<footer>© <span id="yr"></span> Meagan Swenson · Amsterdam, Netherlands · <a href="#lobby">Back to the ground</a></footer>
-
+<footer>© <span id="yr">2026</span> Meagan Swenson · Amsterdam, Netherlands · <a href="#lobby">Back to the ground</a></footer>
 </body>
 </html>

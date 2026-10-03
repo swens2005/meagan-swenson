@@ -1,0 +1,16 @@
+# Meagan Swenson
+
+> Full-stack developer with 25+ years of experience building websites and web applications, from the user interface to the database. Based in Amsterdam, Netherlands. Main stack: Oracle/PL-SQL, PHP/Laravel, React and HTML/CSS/JavaScript, with AI-assisted and agentic development in Claude Code and GitHub Copilot.
+
+Experience includes Hewlett-Packard/EDS (2002–2018), Philips (2019–2023), Albert Heijn / Ahold Delhaize (2023–present) and independent contract work (2026–present). Open to new opportunities.
+
+## Links
+
+- [Portfolio](https://codelaunch.nl/): experience, projects, skills, testimonials and contact details
+- [CV (PDF)](https://codelaunch.nl/meagan-swenson-cv.pdf): ATS-friendly résumé
+- [LinkedIn](https://www.linkedin.com/in/meagan-swenson)
+
+## Contact
+
+- Email: swens2005@yahoo.com
+- Phone: +31 6 27 35 58 91

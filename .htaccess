@@ -1,0 +1,70 @@
+# Server configuration for Apache / LiteSpeed (Namecheap shared hosting).
+# The Content-Security-Policy itself lives in a <meta> tag in index.html so it
+# also works locally; only frame-ancestors (which a meta tag can't set) is here.
+
+Options -Indexes
+
+# --- HTTPS and canonical host ---------------------------------------------
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+
+  # Redirect http:// to https://
+  RewriteCond %{HTTPS} !=on
+  RewriteCond %{HTTP:X-Forwarded-Proto} !=https
+  RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+  # Redirect www.codelaunch.nl to codelaunch.nl
+  RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
+  RewriteRule ^ https://%1%{REQUEST_URI} [L,R=301]
+</IfModule>
+
+# Never serve dotfiles such as .git or .htaccess (Let's Encrypt still needs .well-known)
+RedirectMatch 404 /\.(?!well-known/)
+
+# --- Security headers -----------------------------------------------------
+<IfModule mod_headers.c>
+  Header always set Strict-Transport-Security "max-age=31536000"
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set X-Frame-Options "DENY"
+  Header always set Content-Security-Policy "frame-ancestors 'none'"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+  Header always set Permissions-Policy "camera=(), microphone=(), geolocation=(), payment=(), usb=()"
+  Header always set Cross-Origin-Opener-Policy "same-origin"
+</IfModule>
+
+# --- Types ----------------------------------------------------------------
+AddType font/woff2 .woff2
+AddType image/webp .webp
+AddDefaultCharset utf-8
+AddCharset utf-8 .css .js .txt .xml
+
+# --- Compression (LiteSpeed also compresses on its own) --------------------
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/css text/plain text/xml application/xml application/javascript text/javascript image/svg+xml image/x-icon
+</IfModule>
+
+# --- Caching --------------------------------------------------------------
+# HTML, CSS and JS are revalidated on every visit so edits show up at once
+# (unchanged files come back as a cheap 304). Images and fonts are cached.
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresDefault "access plus 1 hour"
+  ExpiresByType text/html "access plus 0 seconds"
+  ExpiresByType text/css "access plus 0 seconds"
+  ExpiresByType application/javascript "access plus 0 seconds"
+  ExpiresByType text/javascript "access plus 0 seconds"
+  ExpiresByType image/webp "access plus 1 month"
+  ExpiresByType image/jpeg "access plus 1 month"
+  ExpiresByType image/png "access plus 1 month"
+  ExpiresByType image/x-icon "access plus 1 month"
+  ExpiresByType application/pdf "access plus 1 day"
+  ExpiresByType font/woff2 "access plus 1 year"
+</IfModule>
+<IfModule mod_headers.c>
+  <FilesMatch "\.(html|css|js)$">
+    Header set Cache-Control "no-cache"
+  </FilesMatch>
+  <FilesMatch "\.woff2$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </FilesMatch>
+</IfModule>
