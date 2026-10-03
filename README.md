@@ -11,6 +11,7 @@ js/main.js            altitude HUD, scenery and small interactions
 images/               illustrations, photos and the social share image
 fonts/                self-hosted variable fonts (SIL Open Font License)
 .htaccess             HTTPS redirect, security headers, caching (Apache/LiteSpeed)
+.github/workflows/    validation, Lighthouse and FTPS deploy (GitHub Actions)
 robots.txt, sitemap.xml, llms.txt, favicon.ico, apple-touch-icon.png
 meagan-swenson-cv.pdf downloadable CV
 ```
@@ -24,6 +25,24 @@ python -m http.server 8000
 ```
 
 Then open http://localhost:8000.
+
+## Checks and deployment
+
+GitHub Actions ([.github/workflows/deploy.yml](.github/workflows/deploy.yml)) runs on every push and pull request:
+
+1. Validates the HTML ([html-validate](https://html-validate.org/), config in `.htmlvalidate.json`).
+2. Syntax-checks the JavaScript.
+3. Runs Lighthouse three times (`lighthouserc.json`). Accessibility, best practices and SEO must score 100. Performance below 90 only gives a warning.
+
+When a push to `main` passes, the changed files are uploaded to Namecheap over FTPS. Deploys need these repository secrets (Settings → Secrets and variables → Actions):
+
+| Secret         | Value                                                                  |
+| -------------- | ---------------------------------------------------------------------- |
+| `FTP_SERVER`   | the FTP hostname from cPanel (e.g. `ftp.codelaunch.nl`)                |
+| `FTP_USERNAME` | a dedicated cPanel FTP account whose directory is the site root        |
+| `FTP_PASSWORD` | that account's password                                                |
+
+Until all three are set, the deploy step is skipped with a warning instead of failing.
 
 ## Editing notes
 

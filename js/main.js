@@ -204,8 +204,9 @@ function buildClouds() {
       if (lastX.every((v) => Math.abs(v - x) > 18)) break;
     }
     lastX = [...lastX.slice(-2), x];
+    /* not lazy: the same four small files are reused everywhere, and the
+       first clouds are on screen straight away */
     const c = document.createElement("img");
-    c.loading = "lazy"; /* must be set before src to take effect */
     c.decoding = "async";
     c.alt = "";
     c.width = CLOUDS[ck][0];
