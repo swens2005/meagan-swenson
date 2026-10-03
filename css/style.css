@@ -296,6 +296,11 @@ a {
   pointer-events: none;
   opacity: 0;
 }
+/* hidden until main.js has moved it next to the closing heading; otherwise a
+   slow page renders it at the top first and its lazy images load early */
+#meteors:not(.placed) {
+  display: none;
+}
 #meteors img {
   position: absolute;
   height: auto;

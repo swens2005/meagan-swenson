@@ -293,8 +293,10 @@ const meteors = $("#meteors"),
 let grassH = 0;
 
 function placeMeteors() {
-  const h = $("#space h2"),
+  const space = $("#space"),
+    h = $("h2", space),
     range = document.createRange();
+  space.style.paddingTop = "";
   range.selectNodeContents(h);
   const r = range.getBoundingClientRect(),
     W = doc.clientWidth;
@@ -302,13 +304,17 @@ function placeMeteors() {
     w = Math.min(340, W - left - 30),
     top = r.top + scrollY - w * 0.05;
   if (w < 200) {
-    /* no room beside the heading: sit above the section label instead */
-    const tag = $("#space .tag").getBoundingClientRect();
+    /* no room beside the heading: open a gap above the section label and
+       sit there, clear of the text in the section before it */
     w = Math.min(W * 0.5, 220);
+    const mh = w * (531 / 760);
+    space.style.paddingTop = 40 + mh + "px";
+    const tag = $(".tag", space).getBoundingClientRect();
     left = W - w - 8;
-    top = tag.top + scrollY - w * (531 / 760) - 6;
+    top = tag.top + scrollY - mh - 6;
   }
   Object.assign(meteors.style, { width: w + "px", left: left + "px", top: top + "px" });
+  meteors.classList.add("placed");
 }
 
 function place() {
