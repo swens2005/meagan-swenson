@@ -39,7 +39,10 @@ const CAPS = [
     "Air pressure up here is half that of sea level. Roughly the oxygen level of a three-hour status meeting.",
   ],
   [15, "Welcome to the ozone layer, Earth's original sunscreen. No need to reapply."],
-  [30, "Air pressure here is about 1% of that at sea level. Every bag of chips you packed just exploded."],
+  [
+    30,
+    "Air pressure here is about 1% of that at sea level. Every bag of chips you packed just exploded.",
+  ],
   [45, "Weather balloons usually pop before this point. Let's take a moment of silence."],
   [60, "Heading into the coldest layer of the atmosphere. Coffee is no longer optional."],
   [75, "Meteors burn up around here, which is still more graceful than most Friday deployments."],
@@ -197,7 +200,8 @@ function buildClouds() {
   for (let i = 0; i < n; i++) {
     const depth = 0.35 + r() * 0.65,
       ck = CLOUD_PICK[Math.floor(r() * 8)],
-      w = (90 + 300 * depth) * (ck === 5 ? 0.75 : 1);
+      /* cloud-5 is a small image, so keep it small enough to stay sharp */
+      w = ck === 5 ? Math.min((90 + 300 * depth) * 0.75, 160) : 90 + 300 * depth;
     let x;
     for (let t = 0; t < 6; t++) {
       x = -10 + r() * 104;
@@ -556,5 +560,5 @@ refresh();
 /* a note for whoever opens DevTools */
 console.log("%cLooking under the hood? 👀", "font:700 16px sans-serif;color:#8ac800");
 console.log(
-  "I'd like that in a colleague. Hand-built in plain HTML, CSS & JavaScript.\nLet's talk: swens2005@yahoo.com",
+  "I'd like that in a colleague. Built in plain HTML, CSS & JavaScript with an AI-assisted workflow, and the code is on GitHub: https://github.com/swens2005/meagan-swenson\nLet's talk: swens2005@yahoo.com",
 );
