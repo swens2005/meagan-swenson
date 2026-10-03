@@ -38,7 +38,7 @@ When a push to `main` passes, the changed files are uploaded to Namecheap over F
 
 | Secret         | Value                                                                  |
 | -------------- | ---------------------------------------------------------------------- |
-| `FTP_SERVER`   | the FTP hostname from cPanel (e.g. `ftp.codelaunch.nl`)                |
+| `FTP_SERVER`   | the server hostname from cPanel (e.g. `server123.web-hosting.com`); its TLS certificate matches, unlike `ftp.codelaunch.nl` |
 | `FTP_USERNAME` | a dedicated cPanel FTP account whose directory is the site root        |
 | `FTP_PASSWORD` | that account's password                                                |
 
