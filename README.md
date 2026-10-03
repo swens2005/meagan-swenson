@@ -34,12 +34,12 @@ GitHub Actions ([.github/workflows/deploy.yml](.github/workflows/deploy.yml)) ru
 2. Syntax-checks the JavaScript.
 3. Runs Lighthouse three times (`lighthouserc.json`). Accessibility, best practices and SEO must score 100. Performance below 90 only gives a warning.
 
-When a push to `main` passes, the changed files are uploaded to Namecheap over FTPS. Deploys need these repository secrets (Settings → Secrets and variables → Actions):
+When a push to `main` passes, the changed files are uploaded into `public_html/` on Namecheap over FTPS (the folder is `SITE_DIR` in the workflow). Deploys need these repository secrets (Settings → Secrets and variables → Actions):
 
 | Secret         | Value                                                                  |
 | -------------- | ---------------------------------------------------------------------- |
 | `FTP_SERVER`   | the server hostname from cPanel (e.g. `server123.web-hosting.com`); its TLS certificate matches, unlike `ftp.codelaunch.nl` |
-| `FTP_USERNAME` | a dedicated cPanel FTP account whose directory is the site root        |
+| `FTP_USERNAME` | the cPanel FTP username (it logs in to the home folder, `/home/<user>`) |
 | `FTP_PASSWORD` | that account's password                                                |
 
 Until all three are set, the deploy step is skipped with a warning instead of failing.

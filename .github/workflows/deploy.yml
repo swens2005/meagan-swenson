@@ -43,6 +43,10 @@ jobs:
     concurrency:
       group: production
       cancel-in-progress: false
+    env:
+      # Web root, relative to the folder the FTP account logs in to
+      # (the cPanel home folder, /home/<user>). Must end with a slash.
+      SITE_DIR: public_html/
     steps:
       # Skip cleanly (instead of failing) until the FTP secrets have been added
       - name: Check deployment secrets
@@ -63,8 +67,7 @@ jobs:
         if: steps.secrets.outputs.ready == 'true'
 
       # Uploads only files that changed since the last deploy (tracked in
-      # .ftp-deploy-sync-state.json on the server). The FTP account's home
-      # directory should be the site root, so server-dir is "./".
+      # .ftp-deploy-sync-state.json inside SITE_DIR on the server).
       - name: Upload to Namecheap over FTPS
         if: steps.secrets.outputs.ready == 'true'
         uses: SamKirkland/FTP-Deploy-Action@3a9c65ae0fc12ac924ccef8afc26941cc43aad0b # v4.4.0
@@ -73,7 +76,7 @@ jobs:
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           protocol: ftps
-          server-dir: ./
+          server-dir: ${{ env.SITE_DIR }}
           exclude: |
             **/.git*
             **/.git*/**
