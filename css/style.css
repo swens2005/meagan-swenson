@@ -2,7 +2,7 @@
    Meagan Swenson: portfolio
    1. Fonts           5. Floating objects   9. Profile & education
    2. Tokens & base   6. Layout & cards    10. Jobs & skills
-   3. Scene layers    7. Lobby console     11. Quotes, space & footer
+   3. Scene layers    7. Lobby console     11. Quotes, log, space & footer
    4. HUD             8. Stats             12. Responsive & motion
    ========================================================================== */
 
@@ -1346,7 +1346,7 @@ main {
   background: rgba(138, 200, 0, 0.08);
 }
 
-/* 11. Quotes, space & footer --------------------------------------------- */
+/* 11. Quotes, log, space & footer ---------------------------------------- */
 
 blockquote {
   margin: 0;
@@ -1361,6 +1361,42 @@ blockquote footer span {
   color: var(--soft);
   font-size: 14px;
   font-weight: 400;
+}
+
+/* mission log: how this site was built */
+#build .intro {
+  max-width: 52ch;
+  margin: -6px 0 22px;
+  font-size: 17px;
+  text-shadow: 0 0 14px var(--halo);
+}
+.log {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+.log .card {
+  margin-top: 0;
+  padding: 22px 22px 24px;
+}
+.log h3 {
+  margin: 6px 0 8px;
+  font-size: 19px;
+  line-height: 1.2;
+}
+.log p {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.5;
+}
+.devlink {
+  margin: 20px 0 0;
+  font-weight: 600;
+}
+.devlink a {
+  text-decoration-color: var(--accent);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
 }
 
 #space .card {
@@ -1472,6 +1508,12 @@ body > footer {
   }
 }
 
+@media (max-width: 900px) {
+  .log {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
 @media (max-width: 760px) {
   .stats {
     grid-template-columns: 1fr 1fr;
@@ -1495,6 +1537,9 @@ body > footer {
 }
 
 @media (max-width: 560px) {
+  .log {
+    grid-template-columns: 1fr;
+  }
   .headshot {
     width: 112px;
     height: 112px;
