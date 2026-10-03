@@ -6,7 +6,7 @@ Portfolio site for Meagan Swenson, full-stack developer. It's plain HTML, CSS an
 
 ```
 index.html            page content (all text lives here)
-css/style.css         styles, organised in numbered sections
+css/style.css         styles, organized in numbered sections
 js/main.js            altitude HUD, scenery and small interactions
 images/               illustrations, photos and the social share image
 fonts/                self-hosted variable fonts (SIL Open Font License)
@@ -46,6 +46,7 @@ Until all three are set, the deploy step is skipped with a warning instead of fa
 
 ## Editing notes
 
+- **Language:** all content is written in United States English (color, organize, optimize). Proper names keep their official spelling.
 - **Content:** jobs, skills and everything else are in `index.html`. To collapse a long job list, add `class="collapsed"` to the `<ul>`, `class="extra"` to the items to hide, and a `.more` button straight after the list. See Albert Heijn for an example.
 - **Security policy:** `index.html` sets a strict Content-Security-Policy. Don't use inline `style="..."` attributes, inline `<script>` code or files from other domains, because the browser will block them. Put styles in `css/style.css` and code in `js/main.js`.
 - **Images:** use WebP where possible, and always set `width` and `height` on `<img>`. Add `loading="lazy"` to anything below the first screen.

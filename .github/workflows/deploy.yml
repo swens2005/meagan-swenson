@@ -84,3 +84,4 @@ jobs:
             .htmlvalidate.json
             lighthouserc.json
             README.md
+            CLAUDE.md

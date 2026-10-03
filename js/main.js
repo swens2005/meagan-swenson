@@ -36,10 +36,10 @@ const CAPS = [
   [1.8, "You're now higher than any mountain in the Netherlands. Admittedly, the bar is 322 m."],
   [
     5,
-    "Air pressure is half of sea level up here. Roughly the oxygen level of a three-hour status meeting.",
+    "Air pressure up here is half that of sea level. Roughly the oxygen level of a three-hour status meeting.",
   ],
   [15, "Welcome to the ozone layer, Earth's original sunscreen. No need to reapply."],
-  [30, "Air pressure is about 1% of sea level here. Every bag of chips you packed just exploded."],
+  [30, "Air pressure here is about 1% of that at sea level. Every bag of chips you packed just exploded."],
   [45, "Weather balloons usually pop before this point. Let's take a moment of silence."],
   [60, "Heading into the coldest layer of the atmosphere. Coffee is no longer optional."],
   [75, "Meteors burn up around here, which is still more graceful than most Friday deployments."],
@@ -56,8 +56,8 @@ const LAYERS = [
   [85, "Thermosphere"],
   [100, "Outer space"],
 ];
-/* card accent colour per layer */
-const LAYER_COLOURS = ["#8fd0f5", "#5b8de0", "#7a6be0", "#b07ae8", "#e0c3ff"];
+/* card accent color per layer */
+const LAYER_COLORS = ["#8fd0f5", "#5b8de0", "#7a6be0", "#b07ae8", "#e0c3ff"];
 const layerIdx = (km) => (km < 12 ? 0 : km < 50 ? 1 : km < 85 ? 2 : km < 100 ? 3 : 4);
 
 /* sky gradient stops: [scroll progress, top rgb, bottom rgb] */
@@ -337,7 +337,7 @@ function place() {
     c.classList.toggle("t1", li === 1);
     c.classList.toggle("t2", li === 2);
     c.classList.toggle("t3", li >= 3);
-    c.style.setProperty("--acc", c.classList.contains("lime") ? "#8ac800" : LAYER_COLOURS[li]);
+    c.style.setProperty("--acc", c.classList.contains("lime") ? "#8ac800" : LAYER_COLORS[li]);
   });
 
   objEls.forEach((f) => (f.style.top = f.dataset.p * max + innerHeight * 0.42 + "px"));
