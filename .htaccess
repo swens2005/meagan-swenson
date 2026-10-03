@@ -8,14 +8,16 @@ Options -Indexes
 <IfModule mod_rewrite.c>
   RewriteEngine On
 
+  # Redirect www.codelaunch.nl to https://codelaunch.nl in one hop. This runs
+  # first so http://www never passes through https://www, which only works
+  # if the SSL certificate also covers www.
+  RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
+  RewriteRule ^ https://%1%{REQUEST_URI} [L,R=301]
+
   # Redirect http:// to https://
   RewriteCond %{HTTPS} !=on
   RewriteCond %{HTTP:X-Forwarded-Proto} !=https
   RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
-
-  # Redirect www.codelaunch.nl to codelaunch.nl
-  RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
-  RewriteRule ^ https://%1%{REQUEST_URI} [L,R=301]
 </IfModule>
 
 # Never serve dotfiles such as .git or .htaccess (Let's Encrypt still needs .well-known)
