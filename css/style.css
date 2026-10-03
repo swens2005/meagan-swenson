@@ -306,6 +306,7 @@ a {
   left: -6.24%;
   top: 16.86%;
   width: 91.75%;
+  aspect-ratio: 697 / 469;
   --md: 4.2s;
   --mdl: -1.1s;
   --sx: 39px;
@@ -317,6 +318,7 @@ a {
   left: 29.73%;
   top: 11.6%;
   width: 57.24%;
+  aspect-ratio: 435 / 275;
   --md: 3.1s;
   --mdl: -2.3s;
   --sx: 51px;
@@ -328,6 +330,7 @@ a {
   left: 43.92%;
   top: 40.71%;
   width: 49.54%;
+  aspect-ratio: 376 / 228;
   --md: 3.6s;
   --mdl: -0.4s;
   --sx: 44px;
@@ -339,6 +342,7 @@ a {
   left: 59.88%;
   top: 15.53%;
   width: 41.45%;
+  aspect-ratio: 315 / 184;
   --md: 2.6s;
   --mdl: -1.7s;
   --sx: 56px;
@@ -350,6 +354,7 @@ a {
   left: 61.98%;
   top: 0.94%;
   width: 30.69%;
+  aspect-ratio: 233 / 130;
   --md: 3.3s;
   --mdl: -2.9s;
   --sx: 49px;

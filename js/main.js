@@ -161,10 +161,16 @@ const OBJS = [
 let seed = 11;
 const rnd = () => (seed = (seed * 9301 + 49297) % 233280) / 233280;
 
+/* CSS sizes these images with height: auto, so give them an explicit aspect
+   ratio from their width/height attributes before they lazy-load */
+const lockRatio = (el) =>
+  (el.style.aspectRatio = `${el.getAttribute("width")} / ${el.getAttribute("height")}`);
+
 const objEls = OBJS.map(([km, art, x, w, dx, dy = 40]) => {
   const f = document.createElement("figure");
   f.className = `obj ${art.replace(/\d$/, "")} ${art}`;
   f.innerHTML = ART[art];
+  f.querySelectorAll("img").forEach(lockRatio);
   f.dataset.p = pAt(km);
   f.dataset.dx = dx;
   f.dataset.dy = dy;
@@ -204,6 +210,7 @@ function buildClouds() {
     c.alt = "";
     c.width = CLOUDS[ck][0];
     c.height = CLOUDS[ck][1];
+    lockRatio(c);
     c.src = `images/cloud-${ck}.webp`;
     c.className = "bgc" + (r() < 0.5 ? " flip" : "") + (depth < 0.55 ? " far" : "");
     Object.assign(c.style, {
