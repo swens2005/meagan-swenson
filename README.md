@@ -51,6 +51,7 @@ fonts/                self-hosted variable fonts (SIL Open Font License)
 .github/workflows/    validation, Lighthouse and FTPS deploy (GitHub Actions)
 robots.txt, sitemap.xml, llms.txt, favicon.ico, apple-touch-icon.png
 meagan-swenson-cv.pdf downloadable CV
+cv/                   script and photo that build the CV PDF (not deployed)
 CLAUDE.md             conventions for AI assistants (not deployed)
 ```
 
@@ -86,6 +87,7 @@ Until all three are set, the deploy step is skipped with a warning instead of fa
 
 - **Language:** all content is written in United States English (color, organize, optimize). Proper names keep their official spelling.
 - **Content:** jobs, skills and everything else are in `index.html`. To collapse a long job list, add `class="collapsed"` to the `<ul>`, `class="extra"` to the items to hide, and a `.more` button straight after the list. See Albert Heijn for an example.
+- **CV:** `meagan-swenson-cv.pdf` is generated, so don't edit it directly. Its text lives in `cv/build_cv.py` and mirrors `index.html`; when you change content on the site, make the same change there and run `pip install reportlab` once, then `python cv/build_cv.py`.
 - **Security policy:** `index.html` sets a strict Content-Security-Policy. Don't use inline `style="..."` attributes, inline `<script>` code or files from other domains, because the browser will block them. Put styles in `css/style.css` and code in `js/main.js`.
 - **Images:** use WebP where possible, and always set `width` and `height` on `<img>`. Add `loading="lazy"` to anything below the first screen.
 - **Updating the site:** change `lastmod` in `sitemap.xml`. If you change `images/og-image.jpg`, social networks may keep the old preview cached for a while.

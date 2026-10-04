@@ -83,5 +83,6 @@ jobs:
             **/node_modules/**
             .htmlvalidate.json
             lighthouserc.json
+            cv/**
             README.md
             CLAUDE.md
