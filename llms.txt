@@ -7,6 +7,7 @@ Experience includes Hewlett-Packard/EDS (2002–2018), Philips (2019–2023), Al
 ## Links
 
 - [Portfolio](https://codelaunch.nl/): experience, projects, skills, testimonials and contact details
+- [Client work](https://codelaunch.nl/client-work.html): case studies from Adroidea, the web studio she ran for 13 years (dealer ordering platforms, client portals, a video marketplace, website design)
 - [CV (PDF)](https://codelaunch.nl/meagan-swenson-cv.pdf): ATS-friendly résumé
 - [LinkedIn](https://www.linkedin.com/in/meagan-swenson)
 - [Mission Control](https://codelaunch.nl/mission-control/autopilot): portfolio project, a Laravel app that runs a small web studio from proposal to launch; the autopilot demo drives the real app ([source](https://github.com/swens2005/mission-control))

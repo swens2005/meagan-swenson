@@ -3,7 +3,8 @@
    1. Fonts           5. Floating objects   9. Profile & education
    2. Tokens & base   6. Layout & cards    10. Jobs & skills
    3. Scene layers    7. Lobby console     11. Quotes, log, space & footer
-   4. HUD             8. Stats             12. Responsive & motion
+   4. HUD             8. Stats             12. Client work page
+                                           13. Responsive & motion
    ========================================================================== */
 
 /* 1. Fonts (self-hosted variable fonts, SIL Open Font License) ----------- */
@@ -1455,7 +1456,212 @@ body > footer {
     0 0 10px rgba(0, 0, 0, 0.6);
 }
 
-/* 12. Responsive & motion ------------------------------------------------ */
+/* 12. Client work page (client-work.html) -------------------------------- */
+
+/* a still daytime sky: this page has no scroll scene, so --fg stays dark */
+body.work {
+  background: #cfeafa linear-gradient(#9ed3f0, #cfeafa 45%, #eef8fe) fixed;
+}
+
+.wbar {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px 24px;
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 18px 24px 0;
+}
+.whome {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
+.whome img {
+  width: auto;
+  height: 64px;
+}
+.whome b {
+  display: block;
+  font: 800 19px/1.05 var(--display);
+}
+.whome small {
+  display: block;
+  margin-top: 3px;
+  font: 500 13px var(--body);
+  color: var(--soft);
+}
+.wbar nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 18px;
+}
+.wbar nav a {
+  font-weight: 600;
+  text-decoration-color: var(--accent);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
+}
+
+.whero h1 {
+  margin-bottom: 14px;
+  font-size: clamp(44px, 9vw, 96px);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+}
+.work .intro {
+  max-width: 62ch;
+  margin: 0 0 22px;
+  font-size: 18px;
+}
+.wstats {
+  margin-top: 26px;
+}
+/* no gauges here, so the numbers can use the full width */
+.wstats .stat b {
+  padding-right: 0;
+  white-space: nowrap;
+}
+
+.case > .plab {
+  margin-bottom: 8px;
+}
+.case p {
+  margin: 12px 0 0;
+}
+.case .note {
+  padding: 12px 16px;
+  border-left: 4px solid var(--accent);
+  border-radius: 8px;
+  background: #f3f8e6;
+  font-size: 15px;
+}
+
+/* screenshots: two side by side, one on its own, a stack on phones */
+.shots {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin: 18px 0 4px;
+}
+.shots:has(> figure:only-child) {
+  grid-template-columns: 1fr;
+}
+.shots.one figure {
+  max-width: 560px;
+}
+.shots figure,
+.gallery figure {
+  margin: 0;
+}
+.shots img,
+.small img,
+.gallery img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: #fff;
+}
+.shots figcaption {
+  margin-top: 6px;
+  font-size: 13.5px;
+  color: var(--soft);
+}
+
+.card.small {
+  margin-top: 0;
+  padding: 22px;
+}
+.small img {
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  object-position: top;
+  margin-bottom: 14px;
+}
+.small h3 {
+  margin: 4px 0 6px;
+  font-size: 22px;
+}
+.small p {
+  margin: 0;
+  font-size: 15.5px;
+}
+#more .two {
+  row-gap: 22px;
+}
+.cmss {
+  --acc: var(--accent);
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
+.gallery .card {
+  padding: 12px;
+}
+.gallery .card + .card {
+  margin-top: 0;
+}
+.gallery img {
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+}
+.gallery figcaption {
+  padding: 10px 4px 2px;
+  font-size: 14px;
+  color: var(--soft);
+}
+.gallery figcaption b {
+  display: block;
+  font: 700 17px/1.3 var(--display);
+  color: var(--ink);
+}
+
+.wend .card {
+  --acc: var(--accent);
+}
+.wend p {
+  margin: 10px 0 6px;
+  font-size: 17px;
+}
+.wend .big {
+  background: var(--ink);
+  color: #fff;
+}
+.wend .big:hover {
+  background: var(--accent);
+  color: #0a1226;
+}
+body.work > footer {
+  color: var(--ink);
+  text-shadow: none;
+}
+
+@media (max-width: 700px) {
+  .shots,
+  .gallery {
+    grid-template-columns: 1fr;
+  }
+  .wbar {
+    padding: 14px 16px 0;
+  }
+  .work main {
+    padding: 0 16px;
+  }
+  .card.case {
+    padding: 22px 18px;
+  }
+}
+
+/* 13. Responsive & motion ------------------------------------------------ */
 
 /* the full readout only fits beside the 920px column on wide screens */
 @media (max-width: 1439px) {
