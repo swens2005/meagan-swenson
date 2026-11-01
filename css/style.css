@@ -958,6 +958,14 @@ main {
 .cbtn:hover {
   filter: brightness(1.05);
 }
+/* Mission 05's demo buttons: a row on wide screens, a stack on phones */
+.launch-btns {
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  margin-top: 18px;
+}
+.launch-btns small {
+  word-break: normal;
+}
 .cbtn:active {
   transform: translateY(4px);
   box-shadow:

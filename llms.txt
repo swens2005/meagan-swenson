@@ -9,6 +9,7 @@ Experience includes Hewlett-Packard/EDS (2002–2018), Philips (2019–2023), Al
 - [Portfolio](https://codelaunch.nl/): experience, projects, skills, testimonials and contact details
 - [CV (PDF)](https://codelaunch.nl/meagan-swenson-cv.pdf): ATS-friendly résumé
 - [LinkedIn](https://www.linkedin.com/in/meagan-swenson)
+- [Mission Control](https://codelaunch.nl/mission-control/autopilot): portfolio project, a Laravel app that runs a small web studio from proposal to launch; the autopilot demo drives the real app ([source](https://github.com/swens2005/mission-control))
 
 ## Contact
 
