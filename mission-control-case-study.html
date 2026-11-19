@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self'; font-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'; upgrade-insecure-requests">
+  <title>Case Study: Mission Control — Meagan Swenson</title>
+  <meta name="description" content="How Meagan Swenson built Mission Control with an agentic workflow in Claude Code, and built an AI feature into it: Navigator drafts a client proposal from the intake, with prices that never come from the model.">
+  <link rel="canonical" href="https://codelaunch.nl/mission-control-case-study.html">
+  <meta name="theme-color" content="#9ed3f0">
+
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://codelaunch.nl/mission-control-case-study.html">
+  <meta property="og:title" content="Case Study: Mission Control — Meagan Swenson">
+  <meta property="og:description" content="Built with Claude Code, with Claude built in: 43 user stories, 937 automated tests, and an AI proposal assistant with hard guardrails.">
+  <meta property="og:image" content="https://codelaunch.nl/images/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Meagan Swenson, full-stack developer, as a cartoon astronaut against a blue sky">
+  <meta property="og:locale" content="en_US">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="favicon.ico" sizes="48x48">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="preload" href="fonts/figtree-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/bricolage-grotesque-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="work">
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="wbar">
+  <a class="whome" href="./">
+    <img src="images/astronaut.webp" alt="" width="298" height="560">
+    <span><b>Meagan Swenson</b><small>Back to the main site</small></span>
+  </a>
+  <nav aria-label="On this page">
+    <a href="#workflow">Workflow</a>
+    <a href="#navigator">AI feature</a>
+    <a href="#lessons">Lessons</a>
+  </nav>
+</header>
+
+<main id="main">
+  <section class="floor whero">
+    <div class="tag">Case study · Mission Control · October–November 2026</div>
+    <h1>Built with Claude, with Claude built in</h1>
+    <p class="intro">Mission Control runs a small web studio, from the first conversation with a client to launch day. I built it with an agentic workflow in Claude Code. Then I built an AI feature into it: Navigator drafts a client proposal from the intake. Both are live, with a demo anyone can try.</p>
+    <div class="stats wstats">
+      <div class="card stat"><b>43</b><span>user stories, each with acceptance criteria before any code</span></div>
+      <div class="card stat"><b>937</b><span>automated tests: 837 Pest, 77 Vitest and 23 browser tests</span></div>
+      <div class="card stat"><b>14</b><span>architecture decisions on record, from hosting to AI limits</span></div>
+      <div class="card stat"><b>45 days</b><span>from the first commit on October 4 to live AI drafts on November 18</span></div>
+    </div>
+  </section>
+
+  <section class="floor" id="problem" aria-labelledby="problem-h">
+    <div class="tag">The problem</div>
+    <h2 id="problem-h">A studio's work is scattered</h2>
+    <article class="card job case">
+      <p>I ran a web studio for 13 years. Scope, colors, design feedback and launch checks lived in emails, spreadsheets and memory. Turning a client's wishes into a priced proposal took an evening.</p>
+      <p>Mission Control puts that in one place, in four modules: <b>Scope</b> (intake and proposals), <b>Palette Lab</b> (color contrast), <b>Proofmark</b> (comments pinned on designs) and <b>Launch Control</b> (automated checks and a go/no-go board). Clients get their own portal, <b>Launchpad</b>, with one list of everything waiting on them.</p>
+      <div class="stack">
+        <span>Laravel 13</span><span>PHP 8.5</span><span>React 19</span><span>TypeScript</span><span>Inertia</span><span>Tailwind 4</span><span>MariaDB</span><span>Claude API</span>
+      </div>
+    </article>
+  </section>
+
+  <section class="floor" id="workflow" aria-labelledby="workflow-h">
+    <div class="tag">How it was built</div>
+    <h2 id="workflow-h">The agentic workflow</h2>
+    <article class="card job case">
+      <p>I direct, Claude Code builds, and I review every change. The same five steps ran for every feature.</p>
+      <ul>
+        <li><b>1. Story first.</b> A user story with acceptance criteria, approved before any code.</li>
+        <li><b>2. One story at a time.</b> Claude Code builds it in small commits, with feature tests, and unit tests for real logic.</li>
+        <li><b>3. Review per story.</b> Correctness, security and accessibility, with the findings written into the commit message.</li>
+        <li><b>4. Decisions on record.</b> Significant choices become an ADR; ideas out of scope go to a backlog.</li>
+        <li><b>5. CI on every push.</b> Secret scan, code style, static analysis (Larastan level 7), TypeScript, tests on MariaDB, and every autopilot tour in headless Chromium with an accessibility scan. Then a deploy, and a browser test that clicks through the live site.</li>
+      </ul>
+      <p class="note">The project's rules live in a <code>CLAUDE.md</code> file that every session reads: the stack, the commands that must pass, the patterns to reuse and the mistakes not to repeat. It grew with each lesson below.</p>
+    </article>
+  </section>
+
+  <section class="floor" id="navigator" aria-labelledby="navigator-h">
+    <div class="tag">The AI feature · Navigator</div>
+    <h2 id="navigator-h">A proposal drafted in seconds, checked by a person</h2>
+    <article class="card job case">
+      <p>Navigator reads the client's intake and the studio's price list, and suggests lines with a quantity and a reason for each. The studio keeps, changes or switches off every line before anything is added.</p>
+      <div class="shots">
+        <figure>
+          <a href="images/work/navigator.gif"><img src="images/work/navigator-review.webp" alt="Navigator's review panel in Mission Control: a star chart with one star per suggested line, then each line with its price, the reason from the intake, a Keep switch and a quantity the studio can change" width="800" height="500" loading="lazy" decoding="async"></a>
+          <figcaption>Reviewing a draft. <a href="images/work/navigator.gif">Play the 28-second clip</a> of the live demo (GIF, 1.7 MB).</figcaption>
+        </figure>
+      </div>
+      <ul>
+        <li><b>Prices never come from the model.</b> Claude answers through one strict tool that has no price field. It can only pick items from the studio's own library, and the price comes from there.</li>
+        <li><b>Every answer is checked in code.</b> Unknown items, duplicates and impossible quantities are dropped and counted, and the studio sees how many.</li>
+        <li><b>A person decides.</b> The draft waits for review; nothing is added or sent to the client automatically.</li>
+        <li><b>Little data leaves the server.</b> Only the intake and the price list: no names or contact details. The intake is treated as information, never as instructions.</li>
+        <li><b>Costs have hard limits.</b> 3 drafts per demo, 50 a day, and a monthly cap that sends one email. It sits under a spend limit on the API account, so the app always stops first.</li>
+        <li><b>Tested without the API.</b> Feature and browser tests fake Claude's answers, so CI never spends money.</li>
+      </ul>
+      <p class="note">One call to Claude Sonnet 5.5 costs about 2 to 5 cents. The design is recorded in ADR 0014 in the repository.</p>
+      <div class="stack">
+        <span>Claude API</span><span>Tool use</span><span>Structured output</span><span>Validation</span><span>Spend caps</span><span>Http::fake</span>
+      </div>
+    </article>
+  </section>
+
+  <section class="floor" id="lessons" aria-labelledby="lessons-h">
+    <div class="tag">What I'd do differently</div>
+    <h2 id="lessons-h">Lessons, now rules</h2>
+    <article class="card job case">
+      <ul>
+        <li><b>List the host's limits on day one.</b> The app runs in a subfolder on shared hosting with no shell, no queue worker and possibly no <code>proc_open</code>. Some of this I found mid-build; one-off server tasks now need a web route.</li>
+        <li><b>Check a library before adding it.</b> A notification library injected styles at runtime and broke the strict Content-Security-Policy. It was removed; new libraries are checked for this first.</li>
+        <li><b>Test the real site, not just the server.</b> Pages looked fine in the subfolder while links in the browser pointed at the site's root. CI now checks the route prefix, and a browser test clicks through production after every deploy.</li>
+        <li><b>Mirror production's quirks in CI.</b> The production database defaulted to an engine without transactions. A test now guards the engine, and CI runs with the same default.</li>
+        <li><b>Order the safety nets.</b> The app's AI cap was first set above the API account's spend limit, so the account would have stopped first and the warning email never sent. The cap now sits below it.</li>
+      </ul>
+    </article>
+  </section>
+
+  <section class="floor wend">
+    <div class="card">
+      <h2>Hire me for AI work</h2>
+      <p>I'm available for part-time, remote contract work as CodeLaunch: AI features in real products, built and tested like the rest of the app.</p>
+      <a class="big" href="/mission-control/autopilot">Watch the demo</a><a class="big" href="https://github.com/swens2005/mission-control" target="_blank" rel="noopener noreferrer">Source on GitHub</a><a class="big" href="mailto:swens2005@yahoo.com">Email me</a><a class="big" href="https://www.linkedin.com/in/meagan-swenson" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+    </div>
+  </section>
+</main>
+<footer>© 2026 Meagan Swenson · Amsterdam, Netherlands · <a href="./">Back to codelaunch.nl</a> · <a href="client-work.html">Client work</a></footer>
+</body>
+</html>
