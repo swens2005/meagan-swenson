@@ -11,6 +11,7 @@ Experience includes Hewlett-Packard/EDS (2002–2018), Philips (2019–2023), Al
 - [CV (PDF)](https://codelaunch.nl/meagan-swenson-cv.pdf): ATS-friendly résumé
 - [LinkedIn](https://www.linkedin.com/in/meagan-swenson)
 - [Mission Control](https://codelaunch.nl/mission-control/autopilot): portfolio project, a Laravel app that runs a small web studio from proposal to launch; the autopilot demo drives the real app ([source](https://github.com/swens2005/mission-control))
+- [Case study: Mission Control](https://codelaunch.nl/mission-control-case-study.html): how it was built with an agentic workflow in Claude Code, and Navigator, its AI proposal assistant on the Claude API (prices never come from the model, every answer validated, hard cost limits)
 
 ## Contact
 
