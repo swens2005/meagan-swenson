@@ -19,7 +19,8 @@ to find the Switchboard and see a proper preview when it's shared.
 - [x] Mission 05 (Mission Control floor) has a fourth button, "The
       Switchboard"; with four, the buttons sit two by two.
 - [x] `sitemap.xml` and `llms.txt` list it.
-- [ ] The CV's top panel (lobby) links to it: placement to be agreed.
+- [x] The CV's top panel (lobby) links to it: a text link under the status
+      line (Meagan's choice, 20 Nov); the four contact buttons are unchanged.
 - [ ] The CV PDF links to it: the PDF comes from Jobby (Trajectory), whose
       repo is off limits for now; done with that project.
 

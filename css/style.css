@@ -862,6 +862,17 @@ main {
   font: 500 12.5px var(--mono);
   color: #3d6f00;
 }
+/* the lobby's link to the Switchboard, under the status line */
+.sb-link {
+  display: inline-block;
+  margin-top: 4px;
+  padding: 3px 0;
+  font: 500 12.5px var(--mono);
+  color: #10233a;
+}
+.sb-link:hover {
+  color: #3d6f00;
+}
 .cur {
   display: inline-block;
   width: 8px;
