@@ -24,10 +24,10 @@ jobs:
           node-version: lts/*
 
       - name: Validate HTML
-        run: npx --yes html-validate@11.16.1 index.html client-work.html
+        run: npx --yes html-validate@11.16.1 index.html client-work.html switchboard/index.html
 
       - name: Check JavaScript syntax
-        run: node --check js/main.js
+        run: node --check js/main.js && node --check js/switchboard.js
 
       - name: Lighthouse
         run: npx --yes @lhci/cli@0.15.1 autorun
