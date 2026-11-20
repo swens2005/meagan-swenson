@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self'; font-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'; upgrade-insecure-requests">
+  <title>Switchboard — Meagan Swenson</title>
+  <meta name="description" content="Every project Meagan Swenson builds, one line each: Mission Control, Navigator, Containment Breach, Trajectory and this CV site. What each one is, what it proves, and where to try it.">
+  <link rel="canonical" href="https://codelaunch.nl/switchboard/">
+  <meta name="theme-color" content="#0b1830">
+  <meta property="og:locale" content="en_US">
+
+  <link rel="icon" href="../favicon.ico" sizes="48x48">
+  <link rel="apple-touch-icon" href="../apple-touch-icon.png">
+  <link rel="preload" href="../fonts/figtree-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="../fonts/bricolage-grotesque-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="../css/switchboard.css">
+  <!-- Not deferred on purpose: it marks <html> before the first paint, so the
+       hidden lines never flash. It waits for the DOM before doing anything else. -->
+  <script src="../js/switchboard.js"></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="top">
+  <a class="home" href="../">Meagan Swenson<small>Back to the CV</small></a>
+</header>
+
+<main id="main" class="wrap">
+  <div class="mast">
+    <div>
+      <p class="label kicker">codelaunch.nl · Switchboard</p>
+      <h1>Mission Control Switchboard</h1>
+      <p class="intro">Every project Meagan Swenson builds, one line each. Pick a line and it patches through to the console: what it is, what it proves, and where to try it.</p>
+    </div>
+    <figure class="plate">
+      <img src="../images/switchboard/hero-640.webp" srcset="../images/switchboard/hero-640.webp 640w, ../images/switchboard/hero-1200.webp 1200w" sizes="(max-width: 820px) 100vw, 560px" width="1200" height="675" fetchpriority="high" alt="A navy enamel switchboard with brass jacks, five colored lamps and one plug seated in its jack">
+    </figure>
+  </div>
+
+  <section class="panel" aria-labelledby="lines-label">
+    <span class="screw tl"></span><span class="screw tr"></span><span class="screw bl"></span><span class="screw br"></span>
+    <div class="board">
+      <div class="lines-col">
+        <h2 class="label lines-head" id="lines-label">Lines · 5</h2>
+        <!-- Without JavaScript these are links to each card. js/switchboard.js
+             turns the list into a tablist and the cards into its tab panels. -->
+        <ul class="lines" id="lines" aria-labelledby="lines-label">
+          <li><a class="line" id="line-mission-control" href="#mission-control" data-lamp="mc">
+            <span class="jack-col" aria-hidden="true"><span class="lamp"></span><span class="jack"></span></span>
+            <span class="line-text"><span class="line-name">Mission Control</span><span class="line-sub">Live</span></span>
+            <span class="arrow" aria-hidden="true"></span>
+          </a></li>
+          <li><a class="line" id="line-navigator" href="#navigator" data-lamp="nv">
+            <span class="jack-col" aria-hidden="true"><span class="lamp"></span><span class="jack"></span></span>
+            <span class="line-text"><span class="line-name">Navigator</span><span class="line-sub">Live <span class="part">· part of Mission Control</span></span></span>
+            <span class="arrow" aria-hidden="true"></span>
+          </a></li>
+          <li><a class="line" id="line-containment-breach" href="#containment-breach" data-lamp="cb">
+            <span class="jack-col" aria-hidden="true"><span class="lamp"></span><span class="jack"></span></span>
+            <span class="line-text"><span class="line-name">Containment Breach</span><span class="line-sub">In progress</span></span>
+            <span class="arrow" aria-hidden="true"></span>
+          </a></li>
+          <li><a class="line" id="line-trajectory" href="#trajectory" data-lamp="tr">
+            <span class="jack-col" aria-hidden="true"><span class="lamp"></span><span class="jack"></span></span>
+            <span class="line-text"><span class="line-name">Trajectory</span><span class="line-sub">Private</span></span>
+            <span class="arrow" aria-hidden="true"></span>
+          </a></li>
+          <li><a class="line" id="line-codelaunch" href="#codelaunch" data-lamp="cv">
+            <span class="jack-col" aria-hidden="true"><span class="lamp"></span><span class="jack"></span></span>
+            <span class="line-text"><span class="line-name">codelaunch.nl</span><span class="line-sub">Live</span></span>
+            <span class="arrow" aria-hidden="true"></span>
+          </a></li>
+        </ul>
+      </div>
+
+      <div class="console">
+        <div class="console-top">
+          <span class="label">Console</span>
+          <span class="rec" id="rec" data-lamp="mc" aria-hidden="true"><i></i><span id="rec-text">Connected · Mission Control</span></span>
+        </div>
+        <div class="screen">
+<!--
+  One card per line. To add or update a project, copy this template, keep the
+  pane id the same as the line's href, and add its line to the list above.
+
+          <div class="pane" id="project-id" data-lamp="mc">
+            <article aria-labelledby="project-id-h">
+              <div class="tile"><img src="../images/switchboard/project-id-640.webp" srcset="(640w and 1200w)" sizes="(max-width: 820px) 100vw, 720px" width="1200" height="675" loading="lazy" decoding="async" alt="What the picture shows"><span class="badge"><i></i>Status: Live</span></div>
+              <div class="body">
+                <h2 id="project-id-h">Project name</h2>
+                <p class="one">One plain sentence: what it is.</p>
+                <dl class="facts">
+                  <dt>Proves</dt><dd>What it shows about the work</dd>
+                  <dt>Stack</dt><dd><ul class="chips"><li>Tech</li></ul></dd>
+                </dl>
+                <div class="buttons"><a class="cbtn lime" href="...">Watch it fly</a></div>
+              </div>
+            </article>
+          </div>
+-->
+          <div class="pane" id="mission-control" data-lamp="mc">
+            <article aria-labelledby="mission-control-h">
+              <div class="tile"><img src="../images/switchboard/mission-control-640.webp" srcset="../images/switchboard/mission-control-640.webp 640w, ../images/switchboard/mission-control-1200.webp 1200w" sizes="(max-width: 820px) 100vw, 720px" width="1200" height="675" decoding="async" alt="A lime and white cartoon rocket lifting off beside its launch tower at dawn"><span class="badge"><i></i>Status: Live</span></div>
+              <div class="body">
+                <h2 id="mission-control-h">Mission Control</h2>
+                <p class="one">Runs a small web studio from the first conversation to launch day: proposals, color palettes, design proofs and a launch checklist, with a portal for clients.</p>
+                <dl class="facts">
+                  <dt>Proves</dt><dd>Full-stack product work, accessibility, CI</dd>
+                  <dt>Stack</dt><dd><ul class="chips"><li>Laravel</li><li>React</li><li>TypeScript</li><li>Inertia</li><li>Pest</li></ul></dd>
+                </dl>
+                <div class="buttons">
+                  <a class="cbtn lime" href="/mission-control/autopilot">Watch it fly</a>
+                  <a class="cbtn sky" href="/mission-control/login">Take the controls</a>
+                  <a class="cbtn cream" href="https://github.com/swens2005/mission-control" target="_blank" rel="noopener noreferrer">Source</a>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <div class="pane" id="navigator" data-lamp="nv">
+            <article aria-labelledby="navigator-h">
+              <div class="tile"><img src="../images/switchboard/navigator-640.webp" srcset="../images/switchboard/navigator-640.webp 640w, ../images/switchboard/navigator-1200.webp 1200w" sizes="(max-width: 820px) 100vw, 720px" width="1200" height="675" loading="lazy" decoding="async" alt="A brass sextant emblem under a bright star, on a violet starfield"><span class="badge"><i></i>Status: Live</span></div>
+              <div class="body">
+                <h2 id="navigator-h">Navigator</h2>
+                <p class="one">Drafts a priced proposal from a client's intake. The studio approves every line before anything is sent.</p>
+                <dl class="facts">
+                  <dt>Proves</dt><dd>Real AI features with guardrails and a monthly cost cap</dd>
+                  <dt>Part of</dt><dd>Mission Control (Scope)</dd>
+                  <dt>Stack</dt><dd><ul class="chips"><li>Laravel</li><li>Claude API</li><li>Tool use</li></ul></dd>
+                </dl>
+                <div class="buttons">
+                  <a class="cbtn lime" href="/mission-control/autopilot">Watch it fly</a>
+                  <a class="cbtn cream" href="https://github.com/swens2005/mission-control" target="_blank" rel="noopener noreferrer">Source</a>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <div class="pane" id="containment-breach" data-lamp="cb">
+            <article aria-labelledby="containment-breach-h">
+              <div class="tile"><img src="../images/switchboard/containment-breach-640.webp" srcset="../images/switchboard/containment-breach-640.webp 640w, ../images/switchboard/containment-breach-1200.webp 1200w" sizes="(max-width: 820px) 100vw, 720px" width="1200" height="675" loading="lazy" decoding="async" alt="Two small robots in glass tanks before a vault door glowing with green code, one tank lit magenta"><span class="badge"><i></i>Status: In progress</span></div>
+              <div class="body">
+                <h2 id="containment-breach-h">Containment Breach</h2>
+                <p class="one">Crash tests for AI apps: real attacks against small sample apps, tracked over time.</p>
+                <dl class="facts">
+                  <dt>Proves</dt><dd>AI security, TypeScript</dd>
+                  <dt>Stack</dt><dd><ul class="chips"><li>TypeScript</li><li>React</li></ul></dd>
+                </dl>
+                <p class="note">The dashboard and the public repo are on the way.</p>
+              </div>
+            </article>
+          </div>
+
+          <div class="pane" id="trajectory" data-lamp="tr">
+            <article aria-labelledby="trajectory-h">
+              <div class="tile"><img src="../images/switchboard/trajectory-640.webp" srcset="../images/switchboard/trajectory-640.webp 640w, ../images/switchboard/trajectory-1200.webp 1200w" sizes="(max-width: 820px) 100vw, 720px" width="1200" height="675" loading="lazy" decoding="async" alt="A small ship tracing a glowing arc toward a ringed planet in an amber and violet dusk sky"><span class="badge"><i></i>Status: Private</span></div>
+              <div class="body">
+                <h2 id="trajectory-h">Trajectory</h2>
+                <p class="one">A personal job-search app that finds jobs, scores them twice and plots a course to each one.</p>
+                <dl class="facts">
+                  <dt>Proves</dt><dd>AI evals, automation</dd>
+                  <dt>Stack</dt><dd><ul class="chips"><li>Laravel</li><li>React</li><li>TypeScript</li></ul></dd>
+                </dl>
+                <p class="note">Private for now: it runs on real job data. A public demo with sample data is on the way.</p>
+              </div>
+            </article>
+          </div>
+
+          <div class="pane" id="codelaunch" data-lamp="cv">
+            <article aria-labelledby="codelaunch-h">
+              <div class="tile"><img src="../images/switchboard/codelaunch-640.webp" srcset="../images/switchboard/codelaunch-640.webp 640w, ../images/switchboard/codelaunch-1200.webp 1200w" sizes="(max-width: 820px) 100vw, 720px" width="1200" height="675" loading="lazy" decoding="async" alt="The top of codelaunch.nl: a cartoon astronaut beside the name Meagan Swenson, under hanging grass, with the altitude readout at 0 km"><span class="badge"><i></i>Status: Live</span></div>
+              <div class="body">
+                <h2 id="codelaunch-h">codelaunch.nl</h2>
+                <p class="one">This CV site: a climb from the grass to past the Kármán line, one career floor at a time.</p>
+                <dl class="facts">
+                  <dt>Proves</dt><dd>Front-end craft, performance, security</dd>
+                  <dt>Stack</dt><dd><ul class="chips"><li>HTML</li><li>CSS</li><li>JavaScript</li></ul></dd>
+                </dl>
+                <div class="buttons">
+                  <a class="cbtn sky" href="../">Climb it</a>
+                  <a class="cbtn cream" href="https://github.com/swens2005/meagan-swenson" target="_blank" rel="noopener noreferrer">Source</a>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="panel-foot">
+      <span>Client work for Adroidea has its own page: <a href="../client-work.html">Client work</a></span>
+      <a href="../">Back to the CV</a>
+    </div>
+  </section>
+</main>
+<footer class="foot">© 2026 Meagan Swenson · Amsterdam, Netherlands · <a href="../">codelaunch.nl</a></footer>
+</body>
+</html>
