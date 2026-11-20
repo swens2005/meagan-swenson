@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><title>Switchboard OG image</title>
+<!-- Template for images/switchboard/og.jpg. Serve the repo root (python -m http.server), open /docs/art/switchboard-og.html at 1200x630, screenshot the viewport, save as JPG quality 85. -->
+<link rel="stylesheet" href="../../css/switchboard.css">
+<style>
+  html, body { margin: 0; width: 1200px; height: 630px; overflow: hidden; background: #0b1830; }
+  .og { position: relative; width: 1200px; height: 630px;
+    background: url(../../images/switchboard/og-base.jpg) 100px 0 no-repeat, linear-gradient(180deg, #000e2b, #031432 32%, #031640 50%, #04133a 64%, #01102f 80%, #000d2d); }
+  .plate {
+    position: absolute; left: 44px; bottom: 44px; width: 452px;
+    padding: 26px 30px 28px;
+    background: linear-gradient(180deg, #1c3560, #13274a);
+    border: 2px solid #c9a24a; border-radius: 26px;
+    box-shadow: 0 24px 50px rgb(0 0 0 / 55%);
+  }
+  .k { font: 500 15px/1.4 var(--mono); letter-spacing: .16em; text-transform: uppercase; color: #c9a24a; margin: 0 0 12px; }
+  h1 { font: 800 58px/0.98 var(--display); color: #fff; margin: 0 0 16px; }
+  p { font: 400 21px/1.35 var(--body); color: #f3ead3; margin: 0; }
+  .lamps { display: flex; gap: 10px; margin-top: 20px; }
+  .lamps i { width: 16px; height: 16px; border-radius: 50%; background: var(--lamp); box-shadow: 0 0 10px var(--lamp); }
+</style></head>
+<body><div class="og"><div class="plate">
+  <p class="k">● codelaunch.nl/switchboard</p>
+  <h1>Mission Control Switchboard</h1>
+  <p>Every project Meagan Swenson builds, one line each.</p>
+  <div class="lamps"><i data-lamp="mc"></i><i data-lamp="tr"></i><i data-lamp="cb"></i><i data-lamp="nv"></i><i data-lamp="cv"></i></div>
+</div></div></body></html>

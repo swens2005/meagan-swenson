@@ -964,6 +964,10 @@ main {
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   margin-top: 18px;
 }
+/* four buttons (Mission 05 with the Switchboard): two by two, not 3 + 1 */
+.launch-btns:has(> :nth-child(4)) {
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
 .launch-btns small {
   word-break: normal;
 }

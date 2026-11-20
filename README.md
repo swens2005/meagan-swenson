@@ -43,6 +43,8 @@ A single-page portfolio in plain HTML, CSS and JavaScript, with no framework, no
 
 ```
 index.html            page content (all text lives here)
+client-work.html      Adroidea case studies
+switchboard/          the Switchboard: every project, one line each (css/switchboard.css, js/switchboard.js)
 css/style.css         styles, organized in numbered sections
 js/main.js            altitude HUD, scenery and small interactions
 images/               illustrations, photos and the social share image
