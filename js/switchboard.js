@@ -80,4 +80,12 @@ document.addEventListener("DOMContentLoaded", () => {
   // Mission Control, the newest live project, unless the address names another
   connect(byHash(location.hash) || tabs[0]);
   document.documentElement.classList.add("js-ready");
+
+  // Hidden cards' pictures are lazy, so connecting a line showed an empty
+  // tile for a moment. Once the page has loaded, fetch them in the background.
+  const warm = () => {
+    for (const img of document.querySelectorAll(".pane img[loading='lazy']")) img.loading = "eager";
+  };
+  if (document.readyState === "complete") warm();
+  else window.addEventListener("load", warm, { once: true });
 });

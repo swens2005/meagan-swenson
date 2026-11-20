@@ -19,7 +19,7 @@ so a later one-line edit can't quietly break it.
 - [x] Screen reader pass (Chrome accessibility tree): one tablist named
       "Lines · 5", five tabs named with their status, the selected one
       marked, its panel named by the tab.
-- [ ] No console errors or CSP violations, locally and on the live site.
+- [x] No console errors or CSP violations, locally and on the live site.
 
 ## Notes
 

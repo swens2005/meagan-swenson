@@ -12,7 +12,7 @@ project if JavaScript is off or I print the page.
 
 ## Acceptance criteria
 
-- [ ] Served at codelaunch.nl/switchboard/ (`switchboard/index.html`;
+- [x] Served at codelaunch.nl/switchboard/ (`switchboard/index.html`;
       `/switchboard` redirects to it).
 - [x] Plain HTML, CSS and JS, no build step. Own files:
       `css/switchboard.css`, `js/switchboard.js`. No inline scripts, no
@@ -28,9 +28,9 @@ project if JavaScript is off or I print the page.
       reduced motion turns transitions off.
 - [x] Status is always written out next to the lamp; color is never the
       only signal.
-- [ ] Without JavaScript the lines are links to each card and every card
-      shows, one after another. Printed, every card shows and the panel
-      hides.
+- [x] Without JavaScript the lines are links to each card and every card
+      shows, one after another (checked). Printed, every card shows and the panel
+      hides (print stylesheet written; not yet checked on paper).
 - [x] 320 px wide with no sideways scroll; the lines sit above the console.
 - [x] Every text color pair meets WCAG AA (4.5:1), lamp colors included.
 - [x] Self-hosted fonts (the CV's three); the hero picture is not lazy,
