@@ -856,6 +856,20 @@ main {
   font: 400 15.5px/1.6 var(--body);
   color: #22384f;
 }
+/* "Hire me for AI work" under the lede (Star Search story 02) */
+.screen .hire {
+  max-width: none;
+  margin: 10px 0 0;
+  font: 400 15.5px/1.6 var(--body);
+  color: #22384f;
+}
+.screen .hire a {
+  color: #10233a;
+  font-weight: 600;
+}
+.screen .hire a:hover {
+  color: #3d6f00;
+}
 .sline {
   min-height: 1.4em;
   margin-top: 12px;
