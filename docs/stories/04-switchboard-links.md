@@ -21,8 +21,10 @@ to find the Switchboard and see a proper preview when it's shared.
 - [x] `sitemap.xml` and `llms.txt` list it.
 - [x] The CV's top panel (lobby) links to it: a text link under the status
       line (Meagan's choice, 20 Nov); the four contact buttons are unchanged.
-- [ ] The CV PDF links to it: the PDF comes from Jobby (Trajectory), whose
-      repo is off limits for now; done with that project.
+- [x] The CV PDF links to it: the PDF comes from Trajectory. Since
+      2026-11-23 the CV's contact line ends with codelaunch.nl/switchboard,
+      and every contact item is a link in the PDF (Trajectory e6031ed).
+      Both PDFs here were made again and passed their read-back check.
 
 ## Notes
 
