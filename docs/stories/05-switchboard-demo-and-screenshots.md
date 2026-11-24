@@ -22,7 +22,7 @@ Mission Control and Trajectory really look like, so I can judge the work.
 - [x] Both are WebP, 640 and 1200 px wide, 16:9, under 120 KB, with width
       and height set and alt text that says what the screen shows. New file
       names, so no browser keeps showing the old art.
-- [ ] Checked on the live page at desktop and 320 px, console clean.
+- [x] Checked on the live page at desktop and 320 px, console clean.
 
 ## Notes
 
